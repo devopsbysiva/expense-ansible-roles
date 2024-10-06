@@ -23,6 +23,10 @@
   ansible.builtin.user:
     name: expense
 
+- name: Common role task assigned 
+  ansible.builtin.include_role:
+    name: Common
+    tasks_from: main
 # - name: Create a directory if it does not exist
 #   ansible.builtin.file:
 #     path: /app
