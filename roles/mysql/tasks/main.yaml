@@ -1,0 +1,16 @@
+- name: installing mysql server
+  ansible.builtin.package:
+    name: mysql-server
+    state: present
+
+- name: starting and enable services
+  ansible.builtin.service:
+    name: mysqld
+    state: started
+    enabled: yes
+
+- name: connecting to user to check if already password set or not
+  community.mysql.mysql_info:
+    login_user: root
+    login_password: "{{ mysql_password }}"
+    login_host: "{{ login_host }}"
