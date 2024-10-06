@@ -2,8 +2,8 @@
   ansible.builtin.file:
     path: "{{ path }}"
     state: absent
-    
-- name: Removing the directory
+
+- name: creating the directory
   ansible.builtin.file:
     path: "{{ path }}"
     state: directory
