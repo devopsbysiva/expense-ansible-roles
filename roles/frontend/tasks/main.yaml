@@ -11,7 +11,7 @@
 
 - name: Common role task assigned 
   ansible.builtin.include_role:
-    name: Common
+    name: common
     tasks_from: main
 
 
