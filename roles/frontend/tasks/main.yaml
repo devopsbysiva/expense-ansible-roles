@@ -9,6 +9,12 @@
     state: started
     enabled: yes
 
+- name: Common role task assigned 
+  ansible.builtin.include_role:
+    name: Common
+    tasks_from: main
+
+
 # - name: Remove file (delete file)
 #   ansible.builtin.file:
 #     path: /usr/share/nginx/html/
