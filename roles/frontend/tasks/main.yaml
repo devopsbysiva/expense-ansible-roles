@@ -9,26 +9,26 @@
     state: started
     enabled: yes
 
-- name: Remove file (delete file)
-  ansible.builtin.file:
-    path: /usr/share/nginx/html/
-    state: absent
+# - name: Remove file (delete file)
+#   ansible.builtin.file:
+#     path: /usr/share/nginx/html/
+#     state: absent
 
-- name: Download the source code
-  ansible.builtin.get_url:
-    url: https://expense-builds.s3.us-east-1.amazonaws.com/expense-frontend-v2.zip
-    dest: /tmp/frontend.zip
+# - name: Download the source code
+#   ansible.builtin.get_url:
+#     url: https://expense-builds.s3.us-east-1.amazonaws.com/expense-frontend-v2.zip
+#     dest: /tmp/frontend.zip
 
-- name: creating directory
-  ansible.builtin.file:
-    path: /usr/share/nginx/html
-    state: directory
+# - name: creating directory
+#   ansible.builtin.file:
+#     path: /usr/share/nginx/html
+#     state: directory
 
-- name: Extracting frontend page
-  ansible.builtin.unarchive:
-    src: /tmp/frontend.zip
-    dest: /usr/share/nginx/html/
-    remote_src: yes
+# - name: Extracting frontend page
+#   ansible.builtin.unarchive:
+#     src: /tmp/frontend.zip
+#     dest: /usr/share/nginx/html/
+#     remote_src: yes
 
 - name: copying frontend config file.
   ansible.builtin.template:

@@ -1,2 +1,4 @@
 password: ExpenseApp@1 
 login_host: mysql.devgani.online
+path: /app
+component: backend
