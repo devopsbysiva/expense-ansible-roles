@@ -26,7 +26,8 @@
 - name: Common role task assigned 
   ansible.builtin.include_role:
     name: common
-    tasks_from: main
+    tasks_from: app_conf_file
+    
 # - name: Create a directory if it does not exist
 #   ansible.builtin.file:
 #     path: /app
